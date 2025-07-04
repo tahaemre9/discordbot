@@ -66,5 +66,23 @@ async def dog(ctx):
     image_urls = get_dog_image_url()
     await ctx.send(image_urls)
 
+@bot.command()
+async def çevre_kirliliği_hakkında_birşeyler(ctx):
+    await ctx.send("senin için şunalrı buldum:https://www.ankara.bel.tr/files/7414/3695/0096/1-cevrebilgisi-16_SAYFA.pdf    !!!Daha Fazlası için:$dahafazlasoru yazınız")
+
+@bot.command()
+async def dahafazlasoru(ctx):
+    await ctx.send("daha fazla sorular için:https://camlicacevre.com/cevre-kirliligi-nedir-neden-olur-nasil-onlenir/   !!!atık kaybolma süreleri için:$atıkkaybolma yazınız")
+
+
+@bot.command()
+async def atıkkaybolma(ctx):
+    with open('çevrefoto/image1.jpg', 'rb') as f:
+        picture = discord.File(f)
+    await ctx.send(file=picture)
+
+
+
+
 
 bot.run("")
